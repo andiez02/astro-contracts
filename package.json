@@ -4,20 +4,28 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy-factory:local": "npx hardhat run scripts/deploy-factory.ts --network localhost",
+    "deploy-factory:sepolia": "npx hardhat run scripts/deploy-factory.ts --network sepolia",
+    "start-local-node": "npx hardhat node"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andiez02/astro-contracts.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andiez02/astro-contracts/issues"
+  },
+  "homepage": "https://github.com/andiez02/astro-contracts#readme",
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox": "^6.1.0",
+    "hardhat": "^2.28.3"
+  },
+  "dependencies": {
     "@openzeppelin/contracts": "^5.4.0",
-    "@typechain/ethers-v6": "^0.5.1",
-    "@typechain/hardhat": "^9.1.0",
-    "hardhat": "^2.28.3",
-    "hardhat-gas-reporter": "^2.3.0",
-    "solidity-coverage": "^0.8.17",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.9.3"
+    "dotenv": "^17.2.3"
   }
 }
